@@ -2,6 +2,18 @@
 {% block title %} Customize WhatsApp {% endblock %}
 
 {% block content %}
+<article class = "flashes">
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for msg in messages %}
+				<section>
+					<h2>{{ msg }}</h2>
+					<p>{{ msg }}</p>
+				</section>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+</article>
 <section>
 	<h2>{{ name_1 }}</h2>
 	<p>{{ msg_1}}</p>
